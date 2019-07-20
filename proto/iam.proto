@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package zroot.service;
+
+import "iam/admin.proto";
+import "iam/auth.proto";
+
+message Credentials {
+    string username = 1;
+    string password = 2;
+}
+

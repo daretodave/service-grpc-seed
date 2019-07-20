@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package zroot.service.iam;
+
+import "../iam.proto";
+
+service AuthService {
+    rpc Auth (AuthRequest) returns (AuthReply) {
+        option (google.api.http) = {
+          post: "/v1/auth"
+          body: "credentials"
+        };
+    }
+}
+
+message AuthRequest {
+    Credentials credentials = 1;
+}
+message AuthReply {
+    string token = 1;
+}

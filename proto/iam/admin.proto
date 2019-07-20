@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package zroot.service.iam;
+
+import "../iam.proto";
+
+service AdminService {
+    rpc CreateUser (CreateUserRequest) returns (CreateUserReply) {
+        option (google.api.http) = {
+          post: "/v1/admin/user-create"
+          body: "credentials"
+        };
+    }
+}
+
+message CreateUserRequest {
+    Credentials credentials = 1;
+    string email = 2;
+}
+message CreateUserReply {
+    int32 id = 1;
+    string username = 2;
+    string email = 3;
+}
