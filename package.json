@@ -15,7 +15,7 @@
     "dotenv": "^8.0.0",
     "dotenv-defaults": "^1.0.2",
     "google-proto-files": "^1.0.3",
-    "grpc": "^1.22.2",
+    "grpc": "^1.24.9",
     "grpc-errors": "^1.1.1",
     "mali": "^0.16.0",
     "pino": "^5.13.0",
